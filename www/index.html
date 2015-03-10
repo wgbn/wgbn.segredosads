@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="br">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/wgbn.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.2.structure.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        
+        <script type="text/javascript" src="js/sha512.js"></script>
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.2.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+        <title>Segredos ADS</title>
+    </head>
+    <body>
+        
+        <!-- Index -->
+        <div data-role="page" id="index">
+            
+            <div data-role="panel" id="menuu">
+                <ul data-role="listview" class="mnuCinemas">
+                    <li data-icon="plus">
+                        <a href="#novo" data-cinema="7">Novo Segredo</a>
+                    </li>
+                    
+                    <div class="wgbn" align="center"><img src="img/logo-wgbn.png"></div>
+                </ul>
+            </div><!-- /panel -->
+            
+            <div data-role="header" data-position="fixed" data-theme="a">
+                <img src="img/menuii.png" class="menui">
+                <img src="img/refresh.png" class="atualiza">
+                <span><img src="img/logo-texto.png"></span>
+            </div>
+            
+            <div data-role="content" class="pagina">
+               <a href="#novo" class="btn-novo-segredo"><span class="ic-pencil"></span></a>
+                <div id="listaSegredos">
+                    
+                    <ul data-role="listview" data-inset="true" data-corners="false" class="lista">
+                        <li class="titulo-segredo" id="tit_'+_v._id+'">sexo (00 anos)</li>
+                        <li class="segredo" id="txt_'+_v._id+'"><span style="font-style: italic; display: block; font-size: .8em;">12/12/2012</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore architecto, nisi vel, sed voluptatibus tenetur delectus iste itaque error nobis fugiat pariatur qui voluptatum, odit atque deleniti similique. Quis, veritatis.</li>
+                        <li class="opcoes">
+                            <div class="ui-grid-a texto-menor">
+                                <div class="ui-block-a borda-dir"><a href="#" class="btnCurtir" data-curtida="'+_v.curtidas+'" data-uid="'+_v._id+'"><span id="cur_'+_v._id+'">0</span> <img src="img/curtir.png"></a></div>
+                                <div class="ui-block-b"><a href="#" class="btnComentar" data-comenta="'+(_v.comentadas == undefined ? 0 : _v.comentadas)+'" data-uid="'+_v._id+'" data-token="'+_v.token+'"><span id="com_'+_v._id+'">0</span> <img src="img/comenta.png"></a></div>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                </div>
+                <div id="carrega" style="display: none;" align="center"><img src="img/working.gif"></div>
+            </div>
+            
+        </div>
+        <!-- /Index -->
+        
+        <!-- Novo Segredo -->
+        <div data-role="page" id="novo">
+            
+            <div data-role="header" data-position="fixed" data-theme="a">
+                <img src="img/menu-back.png" class="menui">
+                <span><img src="img/logo-texto.png"></span>
+            </div>
+            
+            <div data-role="content" class="pagina">
+                <label for="seusegredo">Conte seu segredo:</label>
+                <textarea id="seusegredo" name="seusegredo" placeholder="Conte-nos aqui o seu segredo" style="min-height: 10em !important;" data-autogrow="false"></textarea>
+                
+                <a href="#" data-role="button" data-icon="check" class="btnEnviarSegredo laranja">Envie seu Segredo</a>
+            </div>
+            
+        </div>
+        <!-- /Novo Segredo -->
+        
+        <!-- Primeira -->
+        <div data-role="page" id="primeira">
+            
+            <div data-role="header" data-position="fixed" data-theme="a">
+                <!--<img src="img/menu-back.png" class="menui">-->
+                <span><img src="img/logo-texto.png"></span>
+            </div>
+            
+            <div data-role="content" class="pagina">
+                <p>Esta é a primeira vez que você acessa o aplicativo, por favor nos dê algumas informações:</p>
+                <hr>
+                
+                <p>Você é:
+                    <fieldset data-role="controlgroup">
+                    
+                        <input type="radio" name="sexo" id="sexo-1" value="1" class="rdSexo">
+                        <label for="sexo-1">Homem</label>
+                        <input type="radio" name="sexo" id="sexo-2" value="2" class="rdSexo">
+                        <label for="sexo-2">Mulher</label>
+                    </fieldset>
+                </p>
+                
+                <p>Sua idade:
+                    <fieldset data-role="controlgroup">
+
+                        <input type="radio" name="idade" id="idade-1" value="1" class="rdIdade">
+                        <label for="idade-1">Menor de 18</label>
+                        <input type="radio" name="idade" id="idade-2" value="2" class="rdIdade">
+                        <label for="idade-2">Entre 18 - 25</label>
+                        <input type="radio" name="idade" id="idade-3" value="3" class="rdIdade">
+                        <label for="idade-3">Entre 26 - 40</label>
+                        <input type="radio" name="idade" id="idade-4" value="4" class="rdIdade">
+                        <label for="idade-4">Acima de 40</label>
+                    </fieldset>
+                </p>
+                
+                <a href="#index" data-role="button" data-icon="check" class="btnIniciar laranja" data-theme="b">Começar a usar!</a>
+                
+            </div>
+            
+        </div>
+        <!-- /primeira -->
+        
+        <!-- Comentarios -->
+        <div data-role="page" id="comentarios">
+            
+            <div data-role="header" data-position="fixed" data-theme="a">
+                <img src="img/menu-back.png" class="menui">
+                <span><img src="img/logo-texto.png"></span>
+            </div>
+            
+            <div data-role="content" class="pagina">
+                <input type="hidden" id="com_uid" value="">
+                <input type="hidden" id="com_token" value="">
+                
+                <ul data-role="listview" data-inset="true" data-corners="false">
+                    <li id="com_titulo" class="titulo-segredo"></li>
+                    <li class="segredo" id="com_texto"></li>
+                </ul>
+                
+                <textarea id="comentario" name="comentario" placeholder="Faça seu comentário" data-autogrow="false"></textarea>
+                
+                <a href="#" data-role="button" data-icon="check" class="btnEnviarComentario laranja">Envie seu Comentário</a>
+                
+                <div id="carrega" style="display: none;" align="center"><img src="img/working.gif"></div>
+                
+                <ul data-role="listview" id="com_comentarios" data-inset="true" data-corners="false"></ul>
+            </div>
+            
+        </div>
+        <!-- /Novo Segredo -->
+
+    </body>
+</html>

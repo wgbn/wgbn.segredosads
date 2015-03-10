@@ -1,0 +1,195 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    
+    font-size:.9em !important;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+.ui-btn {
+    font-size: 1em !important;
+}
+.ui-loader {
+    background: #666 !important;
+    color: #fff !important;
+}
+.ui-overlay-a {
+    background-color: rgba(0,0,0,.4) !important;
+}
+
+h1 {
+    /*font-size:24px;*/
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+.pagina {
+    max-width: 550px;
+    margin: auto;
+    height: 100%;
+    min-height: 100%;
+}
+.ui-page, .ui-panel-wrapper, .ui-page-theme-a {
+    /*background: none !important;*/
+}
+.ui-content {
+    text-shadow: none;
+}
+div[data-role=header] img {
+    max-width: 35px;
+    margin-top: .3em;
+    margin-bottom: .3em;
+    padding: .4em 0;
+    float: left;
+}
+div[data-role=header] span img {
+    max-width: 217px;
+    width: 50% !important;
+    display: block;
+    margin-left: -50px;
+    margin: auto !important;
+    float: none !important;
+    margin-top: .7em !important;
+}
+#index .ui-bar-inherit {
+    background: none !important;
+    border: none !important;
+}
+.verLoader {
+    height: 36px;
+    display: block;
+    text-align: center;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.verLoader img {
+    display: none;
+    margin: 0 auto !important;
+}
+.texto-menor {
+    font-size: .8em !important;
+}
+#menuu {
+    background-color: #63420e !important;
+    color: #fff;
+    text-shadow: 0 0 8px #000;
+}
+
+#menuu li a {
+    background-color: #63420e !important;
+    border: none !important;
+    border-bottom: 1px solid #4b3108 !important;
+    color: #fff;
+    text-shadow: 0 1px 1px #000;
+}
+.opcoes {
+    padding: .2em !important;
+    text-align: center !important;
+}
+.opcoes a {
+    display: block;
+    text-decoration: none;
+    font-weight: normal !important;
+    color: #333 !important;
+}
+.borda-dir {
+    border-right: 1px solid #999 !important;
+}
+.wgbn {
+    margin-top: 5em;
+}
+.segredo {
+    white-space: normal !important;
+}
+.laranja {
+    background: #ffcc33 !important;
+}
+.atualiza {
+    float: right !important;
+    margin-right: .5em;
+    height: 35px !important;
+}
+li[data-role=list-divider], .titulo-segredo {
+    font-size: 1em !important;
+    white-space: normal !important;
+    padding: .3em !important;
+    /*font-weight: bold !important;*/
+    color: #63420e !important;
+}
+.btnComentar span, .btnCurtir span {
+    position: relative;
+    top: -.2em !important;
+}
+
+.btnComentar img, .btnCurtir img {
+    width: 20px;
+}
+.pagina ul:first-child {
+    margin-top: .2em !important;
+}
+.pagina ul {
+    margin-top: .5em !important;
+    margin-bottom: .2em !important
+}
+
+.btn-novo-segredo {
+    -webkit-border-radius: 32px;
+    border-radius: 32px;
+    background: #ffcc33;
+    color: #63420e !important;
+    text-align: center;
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    -webkit-box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.5);
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.5);
+    font-size: 2.5em;
+    line-height: 2em;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    text-decoration: none;
+}
+
+#carrega img {
+    width: 30px;
+    height: 30px;
+}
+
+@media only screen and (max-width: 1000px){
+    .pagina {
+        max-width: 900px;
+    }
+    /*body {
+        font-size: 3em !important;
+        color: green !important;
+    }*/
+}

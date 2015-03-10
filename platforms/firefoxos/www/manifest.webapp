@@ -1,0 +1,10 @@
+{
+  "launch_path": "/index.html",
+  "installs_allowed_from": [
+    "*"
+  ],
+  "version": "1.0.0",
+  "name": "HelloWorld",
+  "pkgName": "com.phonegap.helloworld",
+  "icons":{"128":"res/icon/android/icon-96-xhdpi.png"}
+}
